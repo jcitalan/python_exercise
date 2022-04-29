@@ -15,21 +15,18 @@ def cada_mitad():
 
   contador=0
   print("La mitad es {}".format(mitad))
-  with open("sentencias_sql_uno.txt", 'w') as f:
-    with open('data_ids.csv') as File:  
-        reader = csv.reader(File)
-        max_len_csv=len(row_max)
-        print(max_len_csv)
-        for x,row in enumerate(reader):
-          while(contador<=(mitad-1)):
-            f.write('update suscripcion set estado=False'+'\n')
-            contador+=1
-          print(contador)
-          with open("sentencias_sql_dos.txt", 'w') as f:
-            while(contador<=((mitad+mitad)-1)):
+  with open('data_ids.csv') as File:  
+      reader = csv.reader(File)
+      max_len_csv=len(row_max)
+      print(max_len_csv)
+      with open("sentencias_sql_uno.txt", 'w') as f:
+        with open("sentencias_sql_dos.txt", 'w') as d:
+          for x,row in enumerate(reader):
+            if(mitad<=x):
               f.write('update suscripcion set estado=False'+'\n')
-              contador+=1
-
+              if(x<=(mitad+mitad)-1):
+                  d.write('update suscripcion set estado=False'+'\n')
+        
 def cada_cien():
   '''
     Genera update cada 100
