@@ -53,5 +53,5 @@ def cada_cien():
           if contador==100:
             contador=0
             numero_archivo+=1
-comienza()
+cada_mitad()
 cada_cien()
