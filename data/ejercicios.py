@@ -56,5 +56,5 @@ def cada_cien():
         print("Llege al primero lote de 100 del archivo no:",numero_archivo)
         numero_archivo+=1
         contador=1
-# cada_mitad()
+cada_mitad()
 cada_cien()
