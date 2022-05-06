@@ -97,3 +97,4 @@ update suscripcion set estado=False
 update suscripcion set estado=False
 update suscripcion set estado=False
 update suscripcion set estado=False
+update suscripcion set estado=False

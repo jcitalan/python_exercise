@@ -28,7 +28,7 @@ def cada_mitad():
                   d.write('update suscripcion set estado=False'+'\n')
 def escribe_txt(name,sql):
   with open(name, 'w') as f:
-    for row in range(1,100):
+    for row in range(0,100):
       f.write(sql)
 
 def cada_cien():
